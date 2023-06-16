@@ -7,5 +7,60 @@
       content="width=device-width, initial-scale=1.0" />
     <title>Automatic Aspirator</title>
   </head>
-  <body></body>
+  <body>
+    <h1>Automatic aspirator</h1>
+
+    <!-- create form pour index.js -->
+
+    <form onsubmit="createGrid()">
+      <label for="gridX">Grid dimensions (X) :</label>
+      <input
+        type="number"
+        id="gridX"
+        name="gridX"
+        min="0"
+        max="9"
+        value="5" />
+      <label for="gridY">Grid dimensions (Y) :</label>
+      <input
+        type="number"
+        id="gridY"
+        name="gridY"
+        min="0"
+        max="9"
+        value="5" />
+      <label for="positionX">Initial position (X) :</label>
+      <input
+        type="number"
+        id="positionX"
+        name="positionX"
+        min="0"
+        max="9"
+        value="0" />
+      <label for="positionY">Initial position (Y) :</label>
+      <input
+        type="number"
+        id="positionY"
+        name="positionY"
+        min="0"
+        max="9"
+        value="0" />
+      <label for="direction">Initial direction :</label>
+      <select
+        id="direction"
+        name="direction">
+        <option value="N">North</option>
+        <option value="E">East</option>
+        <option value="S">South</option>
+        <option value="W">West</option>
+      </select>
+      <label for="instructions">Instructions :</label>
+      <input
+        type="text"
+        id="instructions"
+        name="instructions"
+        value="DADADADAA" />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
 </html>
