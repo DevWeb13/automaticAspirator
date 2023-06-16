@@ -5,6 +5,12 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="style.css" />
+    <script
+      src="index.js"
+      defer></script>
     <title>Automatic Aspirator</title>
   </head>
   <body>
@@ -20,7 +26,7 @@
         name="gridX"
         min="0"
         max="9"
-        value="5" />
+        value="9" />
       <label for="gridY">Grid dimensions (Y) :</label>
       <input
         type="number"
@@ -48,7 +54,8 @@
       <label for="direction">Initial direction :</label>
       <select
         id="direction"
-        name="direction">
+        name="direction"
+        value="N">
         <option value="N">North</option>
         <option value="E">East</option>
         <option value="S">South</option>
@@ -62,5 +69,9 @@
         value="DADADADAA" />
       <button type="submit">Submit</button>
     </form>
+
+    <div
+      id="gridContainer"
+      class="grid"></div>
   </body>
 </html>
