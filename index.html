@@ -16,9 +16,25 @@
   <body>
     <h1>Automatic aspirator</h1>
 
-    <!-- create form pour index.js -->
+    <p>
+      This is a simple automatic aspirator that can be controlled by a set of
+      instructions. The aspirator is placed on a grid and can be moved forward,
+      turned left or right. The aspirator can't go outside the grid. The grid is
+      rectangular and can be of any size. The aspirator's position is
+      represented by a combination of X and Y coordinates and a letter
+      representing the direction it is facing. The grid is divided up into a
+      matrix to simplify navigation. An example position might be 0, 0, N, which
+      means the aspirator is in the bottom left corner and facing North. In
+      order to control the aspirator, we send a simple string of letters. The
+      possible letters are 'D', 'G' and 'A'. 'D' and 'G' make the aspirator spin
+      90 degrees right or left respectively, without moving from its current
+      spot. 'A' means move forward one space, and maintain the same direction.
+      Assume that the square directly North from (X, Y) is (X, Y+1). If the
+      position after the movement is outside the grid, the aspirator will not
+      move, retain its orientation and process the next command.
+    </p>
 
-    <form onsubmit="start()">
+    <form id="form">
       <label for="gridX">Grid dimensions (X) :</label>
       <input
         type="number"
@@ -34,7 +50,7 @@
         name="gridY"
         min="0"
         max="9"
-        value="5" />
+        value="9" />
       <label for="positionX">Initial position (X) :</label>
       <input
         type="number"
@@ -67,7 +83,11 @@
         id="instructions"
         name="instructions"
         value="DADADADAA" />
-      <button type="submit">Submit</button>
+      <button
+        type="submit"
+        id="submit">
+        Submit
+      </button>
     </form>
 
     <div
