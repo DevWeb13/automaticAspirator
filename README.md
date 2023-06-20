@@ -35,7 +35,7 @@ Feel free to adapt the code and architecture of the application to allow easy sc
 This project was completed as part of a technical test for a Full Stack Developer position.
 
 # automaticAspirator
-## Installation
+## Install
 
 * You have to clone the project locally with either/or :
 
@@ -52,7 +52,7 @@ git clone git@github.com:DevWeb13/automaticAspirator.git
 npm install
 ```
 
-## Dépendances
+## Dependencies
 
 Le projet utilise les dépendances suivantes :
 
