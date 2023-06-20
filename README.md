@@ -60,22 +60,22 @@ npm start
 
 ## Dependencies
 
-Le projet utilise les dépendances suivantes :
+The project uses the following dependencies :
 
-- **browserify** : Browserify est un outil qui permet de regrouper les fichiers JavaScript et leurs dépendances en un seul fichier pour les utiliser dans un navigateur. Il permet d'utiliser les modules CommonJS dans le navigateur.
+- **browserify** : Browserify is a tool that lets you bundle JavaScript files and their dependencies into a single file for use in a browser. It enables CommonJS modules to be used in the browser..
 
-- **fancy-log** : Fancy-log est un utilitaire de journalisation (logging) qui améliore l'affichage des messages de journalisation dans la console. Il fournit des fonctionnalités supplémentaires telles que la coloration et la mise en forme améliorée des messages.
+- **fancy-log** : Fancy-log is a logging utility that improves the display of log messages in the console. It provides additional features such as coloring and improved formatting of messages.
 
-- **gulp** : Gulp est un système de construction de tâches en JavaScript. Il facilite l'automatisation de diverses tâches de développement, telles que la compilation de fichiers, la minification des ressources, la génération de fichiers, etc.
+- **gulp** : Gulp is a JavaScript task builder. It facilitates the automation of various development tasks, such as file compilation, resource minification, file generation and so on.
 
-- **gulp-clean-css** : Gulp-clean-css est un plugin Gulp qui permet de compresser et de minifier les fichiers CSS. Il réduit la taille des fichiers CSS en supprimant les espaces vides, les commentaires et en optimisant la syntaxe.
+- **gulp-clean-css** : Gulp-clean-css is a Gulp plugin for compressing and minimizing CSS files. It reduces the size of CSS files by removing empty spaces and comments and optimizing syntax.
 
-- **gulp-typescript** : Gulp-typescript est un plugin Gulp pour compiler les fichiers TypeScript en JavaScript. Il prend en charge la compilation des fichiers TypeScript et offre diverses options de configuration pour le processus de compilation.
+- **gulp-typescript** : Gulp-typescript is a Gulp plugin for compiling TypeScript files into JavaScript. It supports the compilation of TypeScript files and offers various configuration options for the compilation process.
 
-- **tsify** : Tsify est un plugin pour Browserify qui permet de compiler les fichiers TypeScript en JavaScript lors du processus de regroupement avec Browserify. Il prend en charge la compilation en continu des fichiers TypeScript et leur intégration transparente dans le bundle final.
+- **tsify** : Tsify is a plugin for Browserify that compiles TypeScript files into JavaScript during the bundling process with Browserify. It supports the continuous compilation of TypeScript files and their seamless integration into the final bundle.
 
-- **typescript** : Typescript est un langage de programmation qui est un sur-ensemble de JavaScript. Il permet d'ajouter des fonctionnalités de typage statique au JavaScript et facilite le développement d'applications JavaScript de grande envergure. Cette dépendance installe le compilateur TypeScript.
+- **typescript** : Typescript is a programming language that is a superset of JavaScript. It adds static typing capabilities to JavaScript and facilitates the development of large-scale JavaScript applications. This dependency installs the TypeScript compiler.
 
-- **vinyl-source-stream** : Vinyl-source-stream est un adaptateur qui permet de transformer les flux de fichiers de Browserify en flux de fichiers compatibles avec Gulp. Il est utilisé pour intégrer les fichiers générés par Browserify dans les tâches Gulp.
+- **vinyl-source-stream** :  Vinyl-source-stream is an adapter that transforms Browserify file streams into Gulp-compatible file streams. It is used to integrate Browserify-generated files into Gulp tasks.
 
-- **watchify** : Watchify est une extension de Browserify qui surveille les modifications des fichiers sources et regénère automatiquement le bundle lorsque des modifications sont détectées. Cela permet un processus de développement plus efficace en évitant de regénérer manuellement le bundle à chaque modification.
+- **watchify** : Watchify is a Browserify extension that monitors changes to source files and automatically regenerates the bundle when modifications are detected. This enables a more efficient development process by avoiding the need to manually regenerate the bundle each time a change is made.
