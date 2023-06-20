@@ -52,6 +52,12 @@ git clone git@github.com:DevWeb13/automaticAspirator.git
 npm install
 ```
 
+* Start
+
+```bash
+npm start
+```
+
 ## Dependencies
 
 Le projet utilise les dépendances suivantes :
