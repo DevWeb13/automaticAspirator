@@ -1,4 +1,8 @@
-import { Grid } from './Grid';
+import CreateDOM from './CreateDOM';
+import Grid from './Grid';
+
+const createDOM = new CreateDOM(document.getElementById('app'));
+console.log(createDOM);
 
 const form = document.getElementById('form') as HTMLFormElement,
   gridXInput = document.getElementById('gridX') as HTMLInputElement,
@@ -27,7 +31,7 @@ const start = (e: MouseEvent) => {
   e.preventDefault();
   const gridX = parseInt(gridXInput.value);
   const gridY = parseInt(gridYInput.value);
-  new Grid(gridContainer, gridX, gridY);
+  const grid = new Grid(gridContainer, gridX, gridY);
 };
 
 form.addEventListener('submit', start);

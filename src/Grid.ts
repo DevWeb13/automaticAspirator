@@ -1,4 +1,4 @@
-export class Grid {
+export default class Grid {
   constructor(
     private container: HTMLElement,
     private x: number,
