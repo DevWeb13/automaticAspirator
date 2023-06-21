@@ -1,29 +1,34 @@
 export default class CreateDOM {
-  constructor(private DOMtarget: HTMLElement) {
+  constructor(
+    private DOMtarget: HTMLElement,
+    private maxGridX: number,
+    private maxGridY: number
+  ) {
     this.render();
   }
 
-  render() {
-    const h1 = document.createElement('h1');
-    h1.textContent = 'Automatic aspirator';
-    this.DOMtarget.appendChild(h1);
-    const instructions = document.createElement('p');
-    instructions.textContent = `This is a simple automatic aspirator that can be controlled by a set of
-    instructions. The aspirator is placed on a grid and can be moved forward,
-    turned left or right. The aspirator can't go outside the grid. The grid is
-    rectangular and can be of any size. The aspirator's position is
-    represented by a combination of X and Y coordinates and a letter
-    representing the direction it is facing. The grid is divided up into a
-    matrix to simplify navigation. An example position might be 0, 0, N, which
-    means the aspirator is in the bottom left corner and facing North. In
-    order to control the aspirator, we send a simple string of letters. The
-    possible letters are 'D', 'G' and 'A'. 'D' and 'G' make the aspirator spin
-    90 degrees right or left respectively, without moving from its current
-    spot. 'A' means move forward one space, and maintain the same direction.
-    Assume that the square directly North from (X, Y) is (X, Y+1). If the
-    position after the movement is outside the grid, the aspirator will not
-    move, retain its orientation and process the next command.`;
-    this.DOMtarget.appendChild(instructions);
+  render(): void {
+    this.h1();
+    this.instructionsUL();
+    this.form();
+    this.instructionDisplay();
+    this.gridContainer();
+  }
+
+  private instructionDisplay(): void {
+    const instructionDisplay = document.createElement('p');
+    instructionDisplay.id = 'instructionDisplay';
+    this.DOMtarget.appendChild(instructionDisplay);
+  }
+
+  private gridContainer(): void {
+    const gridContainer = document.createElement('div');
+    gridContainer.id = 'gridContainer';
+    gridContainer.className = 'grid';
+    this.DOMtarget.appendChild(gridContainer);
+  }
+
+  private form(): void {
     const form = document.createElement('form');
     form.id = 'form';
     this.DOMtarget.appendChild(form);
@@ -33,10 +38,10 @@ export default class CreateDOM {
       'number',
       'gridX',
       'gridX',
-      '0',
-      '9',
+      '1',
+      this.maxGridX.toString(),
       true,
-      '9'
+      this.maxGridX.toString()
     );
     form.appendChild(gridXInput);
     const gridYLabel = this.createLabel('Grid dimensions (Y) :', 'gridY');
@@ -45,22 +50,24 @@ export default class CreateDOM {
       'number',
       'gridY',
       'gridY',
-      '0',
-      '9',
+      '1',
+      this.maxGridY.toString(),
       true,
-      '9'
+      this.maxGridY.toString()
     );
     form.appendChild(gridYInput);
     const positionXLabel = this.createLabel('Position (X) :', 'positionX');
     form.appendChild(positionXLabel);
+    console.log(typeof gridXInput.value);
+
     const positionXInput = this.createInput(
       'number',
       'positionX',
       'positionX',
       '0',
-      '9',
+      (parseInt(gridXInput.value) - 1).toString(),
       true,
-      '0'
+      '5'
     );
     form.appendChild(positionXInput);
     const positionYLabel = this.createLabel('Position (Y) :', 'positionY');
@@ -70,9 +77,9 @@ export default class CreateDOM {
       'positionY',
       'positionY',
       '0',
-      '9',
+      (parseInt(gridYInput.value) - 1).toString(),
       true,
-      '0'
+      '5'
     );
     form.appendChild(positionYInput);
     const directionLabel = this.createLabel('Initial direction :', 'direction');
@@ -105,23 +112,55 @@ export default class CreateDOM {
     form.appendChild(instructionsInput);
     const submitButton = document.createElement('button');
     submitButton.id = 'submit';
+    submitButton.classList.add('submit');
     submitButton.type = 'submit';
     submitButton.textContent = 'Start';
     form.appendChild(submitButton);
-    const gridContainer = document.createElement('div');
-    gridContainer.id = 'gridContainer';
-    gridContainer.className = 'grid';
-    this.DOMtarget.appendChild(gridContainer);
   }
 
-  createLabel(labelText: string, labelFor: string) {
+  private instructionsUL(): void {
+    const instructions = document.createElement('ul');
+    const instructionsHTML = `
+    <li>This is a simple automatic aspirator that can be controlled by a set of instructions.</li>
+    <li>The aspirator is placed on a grid and can be moved forward, turned left or right.</li>
+    <li>The aspirator can't go outside the grid.</li> 
+    <li>The grid is rectangular and max size is 10.</li>
+    <li>An example position might be 0, 0, N, which means the aspirator is in the bottom left corner and facing North.</li>
+    <li>In order to control the aspirator, we send a simple string of letters:</li>
+    <ul>
+      <li>'D' means turn right 90 degrees.</li>
+      <li>'G' means turn left 90 degrees.</li>
+      <li>'A' means move forward one space(if possible).</li>
+    </ul>
+    <li>The aspirator will process this string and perform all actions in sequence.</li>
+    <li>Assume that the square directly North from (X, Y) is (X, Y+1).</li> 
+    <li>If the position after the movement is outside the grid, the aspirator will not move, retain its orientation and process the next command.</li>
+  `;
+
+    instructions.textContent = instructionsHTML;
+
+    const sentences = instructions.textContent.split('. ');
+    const formattedText = sentences
+      .map((sentence) => sentence.trim())
+      .join('.<br>');
+    instructions.innerHTML = formattedText;
+    this.DOMtarget.appendChild(instructions);
+  }
+
+  private h1() {
+    const h1 = document.createElement('h1');
+    h1.textContent = 'Automatic aspirator';
+    this.DOMtarget.appendChild(h1);
+  }
+
+  private createLabel(labelText: string, labelFor: string): HTMLLabelElement {
     const label = document.createElement('label');
     label.textContent = labelText;
     label.htmlFor = labelFor;
     return label;
   }
 
-  createInput(
+  private createInput(
     inputType: string,
     inputId: string,
     inputName: string,
@@ -129,7 +168,7 @@ export default class CreateDOM {
     inputMax: string,
     inputRequired: boolean,
     inputValue: string
-  ) {
+  ): HTMLInputElement {
     const input = document.createElement('input');
     input.type = inputType;
     input.id = inputId;

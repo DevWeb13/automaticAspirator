@@ -1,17 +1,101 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #ddd;
+  color: #333;
+  display: flex;
+  justify-content: center;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90vw;
+  max-width: 90rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+ul {
+  margin-bottom: 1rem;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+#form > input,
+button,
+select {
+  margin-bottom: 1rem;
+}
+
+.submit {
+  color: #333;
+  background-color: #eee;
+  border: 1px solid #999;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+.submit:hover {
+  background-color: #ddd;
+}
+
+.disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.disabled:hover {
+  background-color: #ccc;
+}
+
+#instructionDisplay {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  min-height: 1.375rem;
+}
+
+.alert {
+  color: red;
+}
+
+.finished {
+  color: green;
+  font-weight: bold;
+}
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 100px);
-
+  justify-content: center;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(auto-fill, 5vw);
   gap: 2px;
   margin-bottom: 10px;
+  width: fit-content;
 }
 
 .cell {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100px;
-  height: 100px;
+  width: 5vw;
+  height: 5vw;
   background-color: #eee;
   border: 1px solid #999;
+}
+
+.aspirator,
+.dust {
+  width: 90%;
+  height: 90%;
 }
