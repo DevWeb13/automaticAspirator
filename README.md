@@ -72,7 +72,7 @@ npm start
 
 ## Online link
 
-[Documentation](https://automatic-aspirator.vercel.app/)
+[automaticaspirator.com](https://automatic-aspirator.vercel.app/)
 
 ## Documentation
 
