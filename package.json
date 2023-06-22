@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "watch": "gulp",
-    "start": "live-server dist --port=8080 --entry-file=index.html"
+    "start": "live-server dist --port=8080 --entry-file=index.html",
+    "doc": "typedoc"
   },
   "author": "Giuliano Loic",
   "license": "ISC",
@@ -16,6 +17,7 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-typescript": "^6.0.0-alpha.1",
     "tsify": "^5.0.4",
+    "typedoc": "^0.24.8",
     "typescript": "^5.1.3",
     "vinyl-source-stream": "^2.0.0",
     "watchify": "^4.0.0"

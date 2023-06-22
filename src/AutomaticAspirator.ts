@@ -1,4 +1,4 @@
-export default class AutomaticAspirator {
+export class AutomaticAspirator {
   constructor(
     private positionX: number,
     private positionY: number,

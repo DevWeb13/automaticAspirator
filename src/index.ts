@@ -1,6 +1,6 @@
-import CreateDOM from './CreateDOM';
-import Grid from './Grid';
-import AutomaticAspirator from './AutomaticAspirator';
+import { CreateDOM } from './CreateDOM';
+import { Grid } from './Grid';
+import { AutomaticAspirator } from './AutomaticAspirator';
 
 const maxGridX = 10;
 const maxGridY = 10;
@@ -40,6 +40,13 @@ console.log(
   submitButton
 );
 
+/**
+ * The function sets up and executes the automatic movement of an aspirator on a grid based on user
+ * input instructions.
+ * @param {MouseEvent} e - The parameter `e` is of type `MouseEvent`, which represents a mouse event
+ * that occurs when a user interacts with the mouse. It is used in the `start` function as an argument
+ * for the event listener callback function.
+ */
 const start = (e: MouseEvent) => {
   e.preventDefault();
   // desactive button start

@@ -1,4 +1,4 @@
-export default class Grid {
+export class Grid {
   constructor(
     private container: HTMLElement,
     private x: number,
@@ -8,11 +8,7 @@ export default class Grid {
     this.render();
   }
 
-  reset() {
-    this.render();
-  }
-
-  render() {
+  render(): void {
     this.container.innerHTML = '';
     for (let i = 0; i < this.x; i++) {
       const row = document.createElement('div');

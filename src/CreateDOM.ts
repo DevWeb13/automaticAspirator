@@ -1,4 +1,4 @@
-export default class CreateDOM {
+export class CreateDOM {
   constructor(
     private DOMtarget: HTMLElement,
     private maxGridX: number,

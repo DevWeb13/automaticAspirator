@@ -5,5 +5,11 @@
   "compilerOptions": {
     "noImplicitAny": true,
     "target": "es5"
+  },
+  "typedocOptions": {
+    "entryPoints": [
+      "src/*.ts",
+    ],
+    "out": "docs"
   }
 }
