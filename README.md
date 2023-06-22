@@ -1,4 +1,5 @@
 # Technical Test - Full Stack Developer
+# automaticAspirator
 
 This project involves developing an application to control an automatic vacuum cleaner. The vacuum cleaner is placed in a room represented by a rectangular grid, and it can move within this grid by following a sequence of instructions.
 
@@ -34,7 +35,18 @@ Feel free to adapt the code and architecture of the application to allow easy sc
 
 This project was completed as part of a technical test for a Full Stack Developer position.
 
-# automaticAspirator
+## Measures SonarCloud
+
+|                                                                                                              summary                                                                                                               |                                                                                                           score                                                                                                            |                                                                                                      to do                                                                                                      |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|              [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=DevWeb13_automaticAspirator&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=DevWeb13_automaticAspirator)              |  [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=DevWeb13_automaticAspirator&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=DevWeb13_automaticAspirator)  |  [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=DevWeb13_automaticAspirator&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=DevWeb13_automaticAspirator)   |
+| [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=DevWeb13_automaticAspirator&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=DevWeb13_automaticAspirator) | [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=DevWeb13_automaticAspirator&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=DevWeb13_automaticAspirator) | [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=DevWeb13_automaticAspirator&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=DevWeb13_automaticAspirator) |
+|                   [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=DevWeb13_automaticAspirator&metric=bugs)](https://sonarcloud.io/summary/new_code?id=DevWeb13_automaticAspirator)                   |    [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=DevWeb13_automaticAspirator&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=DevWeb13_automaticAspirator)    |                                                                                                                                                                                                                 |
+|        [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=DevWeb13_automaticAspirator&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=DevWeb13_automaticAspirator)        |                                                                                                                                                                                                                            |
+
+[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=DevWeb13_automaticAspirator)](https://sonarcloud.io/summary/new_code?id=DevWeb13_automaticAspirator)
+
+
 ## Install
 
 * You have to clone the project locally with either/or :
