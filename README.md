@@ -58,6 +58,10 @@ npm install
 npm start
 ```
 
+## Documentation
+
+[Documentation](https://devweb13.github.io/automaticAspirator/)
+
 ## Dependencies
 
 The project uses the following dependencies :
@@ -88,7 +92,3 @@ The project uses the following dependencies :
 
 ## 🛠 Skills
 Javascript, React, Qwik...
-
-## Documentation
-
-[Documentation](/docs/index.html)
