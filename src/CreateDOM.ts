@@ -3,9 +3,7 @@ export class CreateDOM {
     private DOMtarget: HTMLElement,
     private maxGridX: number,
     private maxGridY: number
-  ) {
-    this.render();
-  }
+  ) {}
 
   render(): void {
     this.h1();

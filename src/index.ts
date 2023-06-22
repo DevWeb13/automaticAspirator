@@ -13,7 +13,8 @@ const dustImg = document.createElement('img');
 dustImg.src = './assets/dust.png';
 dustImg.className = 'dust';
 
-new CreateDOM(document.getElementById('root'), maxGridX, maxGridY);
+const DOM = new CreateDOM(document.getElementById('root'), maxGridX, maxGridY);
+DOM.render();
 
 const form = document.getElementById('form') as HTMLFormElement,
   gridXInput = document.getElementById('gridX') as HTMLInputElement,
@@ -63,7 +64,8 @@ const start = (e: MouseEvent) => {
   const direction = directionInput.value;
   const instructions = instructionsInput.value;
 
-  new Grid(gridContainer, gridX, gridY, dustImg);
+  const grid = new Grid(gridContainer, gridX, gridY, dustImg);
+  grid.render();
 
   const automaticAspirator = new AutomaticAspirator(
     positionX,

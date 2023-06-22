@@ -4,9 +4,7 @@ export class Grid {
     private x: number,
     private y: number,
     private dustImg: HTMLImageElement
-  ) {
-    this.render();
-  }
+  ) {}
 
   render(): void {
     this.container.innerHTML = '';
