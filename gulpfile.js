@@ -5,6 +5,8 @@ const watchify = require('watchify');
 const tsify = require('tsify');
 const fancy_log = require('fancy-log');
 const cleanCSS = require('gulp-clean-css');
+const terser = require('gulp-terser');
+const buffer = require('vinyl-buffer');
 const paths = {
   pages: ['src/*.html'],
 };
@@ -31,6 +33,8 @@ function bundle() {
     .bundle()
     .on('error', fancy_log)
     .pipe(source('bundle.js'))
+    .pipe(buffer())
+    .pipe(terser()) // Utilise gulp-terser pour la minification
     .pipe(gulp.dest('dist'));
 }
 gulp.task('default', gulp.series(gulp.parallel('copy-html'), bundle));
