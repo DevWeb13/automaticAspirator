@@ -105,7 +105,7 @@ The project uses the following dependencies :
 - **watchify** : Watchify is a Browserify extension that monitors changes to source files and automatically regenerates the bundle when modifications are detected. This enables a more efficient development process by avoiding the need to manually regenerate the bundle each time a change is made.
 
 ## 🔗 Links
-[![CodinGame](https://i.ibb.co/xSnNqcZ/La-Reponse-Dev-Logo150-150.png)](https://www.lareponsedev.com/)
+[![CodinGame](https://i.ibb.co/HzV8KqG/Capture-d-cran-du-2023-06-15-11-06-56.png)](https://www.lareponsedev.com/)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/loic-g-76968b219/)
 [![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/DeveloppementW1)
 [![CodinGame](https://img.shields.io/static/v1?style=for-the-badge&message=CodinGame&color=222222&logo=CodinGame&logoColor=F2BB13&label=)](https://www.codingame.com/profile/4f9df2adc1f95abbab8380d47656ade10865463)
