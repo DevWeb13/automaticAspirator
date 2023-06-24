@@ -1,5 +1,5 @@
 # Technical Test - Full Stack Developer
-# automaticAspirator
+# Automatic Aspirator
 
 This project involves developing an application to control an automatic vacuum cleaner. The vacuum cleaner is placed in a room represented by a rectangular grid, and it can move within this grid by following a sequence of instructions.
 
@@ -90,11 +90,15 @@ The project uses the following dependencies :
 
 - **gulp-clean-css** : Gulp-clean-css is a Gulp plugin for compressing and minimizing CSS files. It reduces the size of CSS files by removing empty spaces and comments and optimizing syntax.
 
+- **gulp-terser** : Gulp-terser is a Gulp plugin used for minifying JavaScript files using Terser. It reduces the size of JavaScript files by removing whitespace, comments, and optimizing the syntax.
+
 - **gulp-typescript** : Gulp-typescript is a Gulp plugin for compiling TypeScript files into JavaScript. It supports the compilation of TypeScript files and offers various configuration options for the compilation process.
 
 - **tsify** : Tsify is a plugin for Browserify that compiles TypeScript files into JavaScript during the bundling process with Browserify. It supports the continuous compilation of TypeScript files and their seamless integration into the final bundle.
 
 - **typescript** : Typescript is a programming language that is a superset of JavaScript. It adds static typing capabilities to JavaScript and facilitates the development of large-scale JavaScript applications. This dependency installs the TypeScript compiler.
+
+- ***vinyl-buffer** : Vinyl-buffer is a Gulp plugin that converts a stream into a buffer. It is commonly used before the minification step to allow minification plugins like gulp-terser to work correctly.
 
 - **vinyl-source-stream** :  Vinyl-source-stream is an adapter that transforms Browserify file streams into Gulp-compatible file streams. It is used to integrate Browserify-generated files into Gulp tasks.
 
